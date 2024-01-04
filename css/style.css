@@ -3,6 +3,12 @@ body, p, h1, ul, li, blockquote{
     margin: 0px;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
 body{
     font-family: "Volkorn", Georgia, serif;
 }
@@ -89,14 +95,34 @@ li + li{
     background-color: #b07dfb;
 }
 
+/* Content */
+
 .content{
     grid-area: content;
 }
 
+/* Anúncios*/
+
 .anuncios{
     grid-area: anuncios;
+    background-color: #fafbfc;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    align-content: start;
+    padding: 30px;
+    gap: 30px;
 }
+
+/* Footer */
 
 .footer{
     grid-area: footer;
+    background-image: linear-gradient(135deg, #8844ee, #b07dfb);
+    
+}
+
+.footer p{
+    color: white;
+    text-align: center;
+    padding: 30px;
 }
