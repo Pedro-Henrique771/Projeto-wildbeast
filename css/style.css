@@ -5,7 +5,7 @@ body, p, h1, ul, li, blockquote{
 
 img{
     display: block;
-    max-width: 100%;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -36,8 +36,8 @@ a{
     .estrutura {
         grid-template-areas: 
         "header header header"
-        "sidnav content content"
-        "sidnav anuncios anuncios"
+        "sidenav content content"
+        "sidenav anuncios anuncios"
         "footer footer footer";
     }
 }
@@ -191,6 +191,12 @@ li + li{
     gap: 30px;
 }
 
+@media (max-width: 600px) {
+    .content{
+        grid-template-columns: auto;
+    }
+}
+
 .col-wide{
     grid-column: 1 / -1;
 }
@@ -317,6 +323,7 @@ p{
     align-content: start;
     padding: 30px;
     gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* Footer */
